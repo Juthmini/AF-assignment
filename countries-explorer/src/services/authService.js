@@ -101,7 +101,8 @@ export const getFavorites = () => {
   return JSON.parse(localStorage.getItem(favoritesKey) || '[]');
 };
 
-export default {
+// Create a named object for the service
+const authService = {
   register,
   login,
   logout,
@@ -111,3 +112,5 @@ export default {
   removeFromFavorites,
   getFavorites
 };
+
+export default authService;
